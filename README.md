@@ -139,11 +139,11 @@ Workflow:
 Store embeddings → search nearest vectors → get best match
 ```
 
+### Top-K
+
+Top-K sentence retrieval is the process of embedding each sentence into vectors, comparing them with the user query embedding, and selecting the K most semantically similar sentences to pass to the LLM as context for generation.
+
 ---
 
-## ⚠️ Notes
-
-* Ensure the Gemini API key is valid.
-* FAISS stores vectors in memory; for large PDFs, consider persistent vector DBs.
-* Sentence-based chunking ensures semantic context is preserved.
-* This pipeline is a **Naïve RAG** approach and may be enhanced with overlapping chunks or hybrid methods for higher recall.
+## ⚠️Conclusion
+this code retrieves the top 3 semantically relevant chunks for the user query and sends them to the LLM to generate an answer.
