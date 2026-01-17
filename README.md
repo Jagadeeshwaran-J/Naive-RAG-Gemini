@@ -89,12 +89,50 @@ This project demonstrates a **Naïve Retrieval-Augmented Generation (RAG) pipeli
    * LLM output is printed in the terminal.
 
 ---
+## Summary (With Examples)
 
-## 📌 Summary
+### Embedding
 
-* **Goal:** Use a simple RAG approach to answer questions from PDFs.
-* **Components:** PDF extraction, sentence chunking, embeddings, FAISS vector search, Gemini LLM.
-* **Use Case:** Ideal for **document question answering**, policy review, or knowledge retrieval from static documents.
+Convert text into numbers that represent its meaning
+
+```text
+"I love cats" → [0.12, -0.44, 0.98, ...]
+```
+
+(model: all-MiniLM-L6-v2)
+
+### Semantic Search
+
+Find information based on meaning, not exact words
+
+```text
+Search: "cats as pets"
+Finds: "I love cats" ✅
+```
+
+(using cosine similarity)
+
+### Cosine Similarity
+
+A way to measure how close two meanings are
+
+```python
+similarity = cosine_similarity(embedding1, embedding2)
+```
+
+Higher value → meanings are more similar
+
+### Vector Database
+
+Stores number vectors to quickly find the closest matches
+
+* Examples: FAISS, Chroma, Pinecone
+
+Workflow:
+
+```
+Store embeddings → search nearest vectors → get best match
+```
 
 ---
 
