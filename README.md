@@ -3,6 +3,11 @@
 This project demonstrates a **Naïve Retrieval-Augmented Generation (RAG) pipeline** using the Gemini 2.5 Flash LLM (OpenAI-compatible). The pipeline extracts text from a PDF, chunks it, converts chunks into embeddings, stores them in FAISS, and retrieves relevant context to answer user queries.
 
 ---
+## 🧠(Traditional RAG) / (Naïve RAG) / (Vector-Based RAG)
+#### *Definition:* 
+Traditional Retrieval-Augmented Generation (RAG) retrieves `semantically similar text chunks` using vector embeddings, then passes those chunks to an LLM to generate an answer.
+
+---
 
 ## ✅ Key Steps in the Pipeline
 
